@@ -14,6 +14,7 @@ def chatbot_response(user_input):
         "who are you": "This chatbot is developed by Shivani."
     }
     return responses.get(user_input.lower(), "Sorry, I didn't understand that.")
+    
 if "chat" not in st.session_state:
     st.session_state.chat = []
 
@@ -29,4 +30,5 @@ for sender, message in st.session_state.chat:
         st.markdown(f"**🧑 You:** {message}")
     else:
         st.markdown(f"**🤖 Bot:** {message}")
+
 
